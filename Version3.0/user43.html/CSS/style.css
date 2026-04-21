@@ -1,21 +1,59 @@
+/* TABLE STYLING */
 table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	border-spacing: 0px;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    color: #003366;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0px;
 }
 
+/* ROW STYLE */
 tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
+    border: 1px solid #ffffff;
+    text-align: center;
+    background-color: #9FB6CD;
 }
 
+/* HEADER STYLE */
 th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+    text-align: center;
+    color: #ffffff;
+    background-color: #003366;
+}
+
+/* PAGE BACKGROUND IMAGE */
+body {
+    background-image: url("https://images.unsplash.com/photo-1511379938547-c1f69419868d");
+    background-size: cover;
+}
+
+/* ORDERED LIST */
+ol {
+    color: darkblue;
+    font-size: 18px;
+}
+
+/* UNORDERED LIST */
+ul {
+    color: darkgreen;
+    font-style: italic;
+}
+
+/* NAVBAR */
+nav {
+    text-align: center;
+    margin: 20px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: red;
 }

@@ -8,17 +8,33 @@ body {
 }
 
 table {
-    margin: auto;
-    background-color: rgba(0,0,0,0.7);
-    border-collapse: collapse;
-    width: 70%;
+	font-family: "Marker Felt", "Comic Sans MS", fantasy;
+	color: #3571ad;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0px;
 }
 
-th, td {
-    border: 1px solid white;
-    padding: 10px;
+tr {
+	border: 1px solid #232222;
+	text-align: center;
+	background-color:#495564; 
 }
 
 th {
-    background-color: black;
+	text-align: center;
+	color: #ffffff;
+	background-color: #c693e4;
+	background-size:cover
+}
+body {
+	background-color: #9961b1;
+}
+ol{
+	list-style-type: upper-roman;
+}
+ul {
+  list-style-type: square;
 }

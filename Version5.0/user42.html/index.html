@@ -1,160 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Version 5.0
-    Name: Sawyer
-    Date Completed: April 29, 2026
--->
-
 <head>
-    <title>Bootstrap Examples</title>
+    <title>Bootstrap Footer Assignment</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        footer {
-            font-size: 12px;
-            text-align: center;
-        }
-
-        .demo-content {
-            padding: 15px;
-            font-size: 18px;
-            background: #dbdfe5;
-            margin-bottom: 15px;
-        }
-
-        .demo-content.bg-alt {
-            background: #abb1b8;
-        }
-
-        /* striped table customization */
-        .table-striped > tbody > tr:nth-of-type(odd) > * {
-            --bs-table-bg-type: rgba(0, 128, 255, 0.2);
-        }
-    </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a href="#" class="navbar-brand">Sawyer WebDev</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-            </ul>
-
-            <a href="form.html" class="btn btn-primary">Form Page</a>
-        </div>
-    </div>
-</nav>
-
 <!-- HEADER -->
-<header class="p-5 bg-primary-subtle text-black text-center">
-    <h4>Bootstrap Examples</h4>
-    <p class="lead">Let’s explore how Bootstrap layouts work</p>
+<header class="bg-primary text-white text-center p-5">
+    <h1>Sawyer WebDev</h1>
+    <p class="lead">Bootstrap Footer Assignment</p>
 </header>
 
-<!-- MAIN -->
-<main>
-
-<div class="container mt-3">
-
-    <!-- GRID (your original content kept) -->
+<!-- MAIN CONTENT (just filler so footer stands out) -->
+<div class="container my-5">
     <div class="row">
-        <div class="col-md-6"><div class="demo-content">6 Columns</div></div>
-        <div class="col-md-6"><div class="demo-content bg-alt">6 Columns</div></div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4"><div class="demo-content">4 Columns</div></div>
-        <div class="col-md-8"><div class="demo-content bg-alt">8 Columns</div></div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3"><div class="demo-content">3 Columns</div></div>
-        <div class="col-md-9"><div class="demo-content bg-alt">9 Columns</div></div>
-    </div>
-
-</div>
-
-<!-- TABLE -->
-<div class="container mt-4">
-    <h3 class="text-center">Contacts</h3>
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>1</td><td>Peter Parker</td><td>peter@email.com</td></tr>
-            <tr><td>2</td><td>Bruce Wayne</td><td>bruce@email.com</td></tr>
-            <tr><td>3</td><td>Clark Kent</td><td>clark@email.com</td></tr>
-        </tbody>
-    </table>
-</div>
-
-<!-- LIST GROUP -->
-<div class="container mt-4">
-    <h3 class="text-center">Menu</h3>
-
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active">
-            <i class="fa fa-home"></i> Home
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <i class="fa fa-camera"></i> Photos
-            <span class="badge bg-secondary float-end">120</span>
-        </a>
-        <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
-            <i class="fa fa-music"></i> Music
-            <span class="badge bg-secondary float-end">45</span>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <i class="fa fa-film"></i> Videos
-            <span class="badge bg-secondary float-end">10</span>
-        </a>
+        <div class="col-md-4 bg-light p-4">Column 1</div>
+        <div class="col-md-4 bg-secondary text-white p-4">Column 2</div>
+        <div class="col-md-4 bg-light p-4">Column 3</div>
     </div>
 </div>
-
-<!-- FORM BUTTON -->
-<div class="container mt-4 text-center">
-    <a href="form.html" class="btn btn-success btn-lg">
-        Go to Form Page
-    </a>
-</div>
-
-</main>
 
 <!-- FOOTER -->
-<footer class="mt-4">
-    <div class="container py-3">
-        <ul class="list-unstyled d-flex justify-content-center">
-            <li class="mx-3"><i class="fa-brands fa-facebook fa-2x"></i></li>
-            <li class="mx-3"><i class="fa-brands fa-instagram fa-2x"></i></li>
-            <li class="mx-3"><i class="fa-brands fa-github fa-2x"></i></li>
-        </ul>
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row text-start">
+
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5>About</h5>
+                <p>This website was created using Bootstrap 5 for a web development assignment.</p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="col-md-4 mb-3">
+                <h5>Navigation</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Portfolio</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Gallery</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-md-4 mb-3">
+                <h5>Follow Me</h5>
+                <i class="fa-brands fa-facebook fa-2x me-3"></i>
+                <i class="fa-brands fa-instagram fa-2x me-3"></i>
+                <i class="fa-brands fa-github fa-2x"></i>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="text-center border-top pt-3 mt-3">
+            <p class="mb-0">&copy; 2026 Sawyer WebDev</p>
+        </div>
     </div>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

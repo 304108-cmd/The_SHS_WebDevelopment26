@@ -1,249 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Version 7.0 
-    Name:  
-    Date Completed: 
+
+<!-- Version 7.0
+     Name: Sawyer
+     Date Completed: 5/12/2026
 -->
 
 <head>
-    <title>Dynamic Webpage</title>
+    <title>Home Page</title>
 
-    <!-- Meta data -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Introduction to JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 
-    <!-- JavaScript -->
-    <!-- These are needed to get the responsive menu to work -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
     <style>
-        /* Internal Styling Here */
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .card-box {
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+
+        .card-box:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+        }
     </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav me-auto">
-                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="games.html" class="nav-link">Games</a>
-                    </li>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-primary" type="button">Login</button>
-                </form>
-            </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+    <div class="container-fluid">
+
+        <a class="navbar-brand fw-bold" href="index.html">WebDev</a>
+
+        <div class="navbar-nav">
+
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="games.html">Games</a>
+            <a class="nav-link" href="script.html">JavaScript</a>
+
         </div>
-    </nav>
 
-    <main class="container-fluid mt-3">
-        <div id="built-in-functions">
-            <!-- ALERT-->
-            <script>
-                alert('Go Sabers!');
-            </script>
-            <!--PRINT-->
-            <script>
-                function printWindow() {
-                    window.print();
-                }
-            </script>
-            <!--LENGTH-->
-            <script>
-                function getLength() {
-                    document.getElementById("length").innerHTML = document.title.length;
-                }
-            </script>
-            <!-- FOCUS-->
-            <script>
-                function getFocus() {
-                    document.getElementById("focusButton").focus();
-                }
-            </script>
-            <!-- CLICK-->
-            <script>
-                function clickSimulation() {
-                    document.getElementById("Check").click();
-                }
-            </script>
-            <script>
-                function getDate() {
-                    document.getElementById("date").innerHTML = Date();
-                }
-            </script>
-
-            <div class="container-fluid mt-3 mb-3">
-                <div class="row">
-                    <!--PRINT-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" value="print this page" onclick="printWindow()">Print this
-                            page</button>
-                    </div>
-                    <!--LENGTH-->
-                    <div class="col-md-3">
-                        <button class="btn btn-dark btn-md" onclick="getLength()">The title has this many
-                            characters</button>
-                    </div>
-                    <div class="col-md-1">
-                        <p id="length"></p>
-                    </div>
-                    <!--FOCUS-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" onclick="getFocus()">Focus</button>
-                    </div>
-                    <!-- CLICK-->
-                    <div class="col-md-1">
-                        <form>
-                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
-                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
-                        </form>
-                    </div>
-                    <!--DATE-->
-                    <div class="col-md-1">
-                        <button class="btn btn-dark btn-md" onclick="getDate()">Get Date</button>
-                    </div>
-                    <div class="col-md-3">
-                        <p id="date"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5">
-                    <h1>Heading for a long list</h1>
-                    <ol id="nestedList">
-                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.
-                                    <ol>
-                                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            <ol>
-                                                <li>Lorem ipsum dolor sit amet, consectetuer.</li>
-                                            </ol>
-                                        </li>
-                                        <li>Aliquam tincidunt mauris eu risus.</li>
-                                        <li>Vestibulum auctor dapibus neque.</li>
-                                    </ol>
-                                </li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-                        </li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.</li>
-                    </ol>
-
-                </div>
-
-                <div class="col-md-2 text-center">
-                    <button class="btn btn-danger btn-lg mt-3 container" onclick="firstSelector()">Try it
-                        1</button>
-
-                    <button class="btn btn-info btn-lg mt-3 container" onclick="secondSelector()">Try it
-                        2</button>
-
-                    <button class="btn btn-secondary btn-lg mt-3 container" onclick="thirdSelector()">Try it
-                        3</button>
-
-                    <button class="btn btn-primary btn-lg mt-3 container" onclick="window.location.reload()">Try
-                        it
-                        4</button>
-                </div>
-
-                <div class="col-md-5" id="shoppingList">
-                    <h1>My shopping list</h1>
-
-                    <div>
-                        <label for="item">Enter a new item:</label>
-                        <input type="text" name="item" id="item">
-                        <button id="aggregating-list">Add item</button>
-                    </div>
-
-                    <ul>
-
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-        <script id="lists">
-            function firstSelector() {
-                document.querySelector("#nestedList>li").style.backgroundColor = "#dc3545";
-            }
-
-            function secondSelector() {
-                var x = document.querySelectorAll("#nestedList>li");
-                var i;
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.backgroundColor = "#17a2b8";
-                }
-            }
-
-            function thirdSelector() {
-                document.querySelector("#nestedList ol li").style.backgroundColor = "#6c757d";
-            }
-        </script>
-        <script id="shopping">
-            const list = document.querySelector('#shoppingList');
-            const input = document.getElementById('item');
-            const button = document.getElementById('aggregating-list');
-
-            button.onclick = function() {
-                let myItem = input.value;
-                input.value = '';
-
-                const listItem = document.createElement('li');
-                const listText = document.createElement('span');
-                const listBtn = document.createElement('button');
-
-                listItem.appendChild(listText);
-                listText.textContent = myItem;
-                listItem.appendChild(listBtn);
-                listBtn.textContent = 'Delete';
-                list.appendChild(listItem);
-
-                listBtn.onclick = function(e) {
-                    list.removeChild(listItem);
-                }
-
-                input.focus();
-            }
-        </script>
-    </main>
-    <div id="container" style="height: 3000px; width: 1000px;">
-        <a href="#"><button type="button" id="focusButton" style="margin-top: 3000px;">You focused on me!</button></a>
     </div>
-</body>
+</nav>
 
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1 class="display-4 fw-bold">Welcome to My Dynamic Webpage</h1>
+    <p class="lead">JavaScript • Games • Interactive Features</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card-box bg-danger">
+                <h3>JavaScript</h3>
+                <p>Learn functions, events, and interactivity.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-box bg-warning text-dark">
+                <h3>Games</h3>
+                <p>Play fun interactive browser games.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-box bg-success">
+                <h3>Projects</h3>
+                <p>Build dynamic and responsive web pages.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="games.html" class="btn btn-light btn-lg">
+            🚀 Go to Games
+        </a>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center">
+    <p>Webpage made by Sawyer</p>
+</footer>
+
+</body>
 </html>

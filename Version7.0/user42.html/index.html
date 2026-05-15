@@ -1,119 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Version 7.0
-     Name: Sawyer
-     Date Completed: 5/12/2026
--->
-
 <head>
-    <title>Home Page</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <title>JavaScript Math</title>
 
     <style>
         body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
+            font-family: Arial, sans-serif;
+            padding: 40px;
         }
 
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
+        /* Matches the large input style from your screenshot */
+        input {
+            width: 300px;
+            height: 40px;
+            font-size: 28px;
+            margin: 5px;
         }
 
-        .card-box {
-            padding: 20px;
-            border-radius: 15px;
-            color: white;
-            transition: transform 0.2s ease;
+        button {
+            height: 48px;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0 15px;
         }
 
-        .card-box:hover {
-            transform: scale(1.05);
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
+        p {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .symbol {
+            font-size: 40px;
+            vertical-align: middle;
+        }
+
+        .result-text {
+            color: blue;
+            font-weight: bold;
         }
     </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
-    <div class="container-fluid">
-
-        <a class="navbar-brand fw-bold" href="index.html">WebDev</a>
-
-        <div class="navbar-nav">
-
-            <a class="nav-link active" href="index.html">Home</a>
-            <a class="nav-link" href="games.html">Games</a>
-            <a class="nav-link" href="script.html">JavaScript</a>
-
-        </div>
-
-    </div>
-</nav>
-
-<!-- HERO SECTION -->
-<div class="hero">
-    <h1 class="display-4 fw-bold">Welcome to My Dynamic Webpage</h1>
-    <p class="lead">JavaScript • Games • Interactive Features</p>
-</div>
-
-<!-- MAIN CONTENT -->
-<main class="container">
-
-    <div class="row text-center">
-
-        <div class="col-md-4">
-            <div class="card-box bg-danger">
-                <h3>JavaScript</h3>
-                <p>Learn functions, events, and interactivity.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card-box bg-warning text-dark">
-                <h3>Games</h3>
-                <p>Play fun interactive browser games.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card-box bg-success">
-                <h3>Projects</h3>
-                <p>Build dynamic and responsive web pages.</p>
-            </div>
-        </div>
-
+    <div class="section">
+        <input id="add1" type="number">
+        <span class="symbol"> + </span>
+        <input id="add2" type="number">
+        <button onclick="addNumbers()">add</button>
+        <p id="addOutput" class="result-text"></p>
     </div>
 
-    <div class="text-center mt-5">
-        <a href="games.html" class="btn btn-light btn-lg">
-            🚀 Go to Games
-        </a>
+    <div class="section">
+        <input id="multiply1" type="number">
+        <span class="symbol"> * </span>
+        <input id="multiply2" type="number">
+        <button onclick="multiplyNumbers()">multiply</button>
+        <p id="multiplyOutput" class="result-text"></p>
     </div>
 
-</main>
+    <div class="section">
+        <h1>Pythagorean Theorem</h1>
+        <p>
+            a= <input id="aValue" type="number">
+        </p>
+        <p>
+            b= <input id="bValue" type="number">
+        </p>
+        <button onclick="findC()">Find C</button>
+        <p id="cOutput" class="result-text"></p>
+    </div>
 
-<!-- FOOTER -->
-<footer class="text-center">
-    <p>Webpage made by Sawyer</p>
-</footer>
+    <script>
+        // Addition Logic
+        function addNumbers() {
+            let num1 = Number(document.getElementById("add1").value);
+            let num2 = Number(document.getElementById("add2").value);
+            let answer = num1 + num2;
+            document.getElementById("addOutput").innerHTML = "Result: " + answer;
+        }
+
+        // Multiplication Logic
+        function multiplyNumbers() {
+            let num1 = Number(document.getElementById("multiply1").value);
+            let num2 = Number(document.getElementById("multiply2").value);
+            let answer = num1 * num2;
+            document.getElementById("multiplyOutput").innerHTML = "Result: " + answer;
+        }
+
+        // Pythagorean Logic: c = √(a² + b²)
+        function findC() {
+            let a = Number(document.getElementById("aValue").value);
+            let b = Number(document.getElementById("bValue").value);
+            
+            if (a > 0 && b > 0) {
+                let c = Math.sqrt((a * a) + (b * b));
+                // toFixed(2) limits the result to 2 decimal places for neatness
+                document.getElementById("cOutput").innerHTML = "c = " + c.toFixed(2);
+            } else {
+                document.getElementById("cOutput").innerHTML = "Please enter values for a and b";
+            }
+        }
+    </script>
 
 </body>
 </html>

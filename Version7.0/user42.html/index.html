@@ -3,116 +3,164 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript Math</title>
+    <title>Mad Lib Assignment</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial;
             padding: 40px;
         }
 
-        /* Matches the large input style from your screenshot */
+        h1, h2 {
+            margin-top: 40px;
+        }
+
         input {
             width: 300px;
-            height: 40px;
-            font-size: 28px;
+            height: 35px;
+            font-size: 20px;
             margin: 5px;
+            padding-left: 5px;
         }
 
         button {
-            height: 48px;
-            font-size: 28px;
+            height: 40px;
+            font-size: 20px;
             cursor: pointer;
-            padding: 0 15px;
+            margin-top: 10px;
         }
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            font-size: 18px;
         }
 
         p {
-            font-size: 30px;
-            margin: 10px 0;
+            font-size: 20px;
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .symbol {
-            font-size: 40px;
-            vertical-align: middle;
-        }
-
-        .result-text {
+        .output {
             color: blue;
             font-weight: bold;
+            font-size: 24px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="section">
-        <input id="add1" type="number">
-        <span class="symbol"> + </span>
-        <input id="add2" type="number">
-        <button onclick="addNumbers()">add</button>
-        <p id="addOutput" class="result-text"></p>
-    </div>
+    <h1>Mad Lib Assignment</h1>
 
-    <div class="section">
-        <input id="multiply1" type="number">
-        <span class="symbol"> * </span>
-        <input id="multiply2" type="number">
-        <button onclick="multiplyNumbers()">multiply</button>
-        <p id="multiplyOutput" class="result-text"></p>
-    </div>
+    <!-- STORY -->
+    <h2>Short Story</h2>
 
-    <div class="section">
-        <h1>Pythagorean Theorem</h1>
-        <p>
-            a= <input id="aValue" type="number">
-        </p>
-        <p>
-            b= <input id="bValue" type="number">
-        </p>
-        <button onclick="findC()">Find C</button>
-        <p id="cOutput" class="result-text"></p>
-    </div>
+    <p>
+        Inside a quiet village near the mountains, a curious teenager named Mason dreamed of becoming an inventor.
+        Every afternoon, he worked inside his small garage building strange machines out of old metal and broken electronics.
+        His neighbors often laughed at his unusual ideas, but Mason never gave up on his experiments.
+    </p>
 
+    <p>
+        One stormy evening, Mason discovered a glowing object buried beneath a pile of tools in the corner of the garage.
+        The object was smooth, silver, and covered in mysterious symbols that shimmered in the dark.
+        As soon as he touched it, the garage lights flickered wildly and the windows rattled from the powerful energy.
+    </p>
+
+    <p>
+        Mason slowly stepped through the doorway and entered a massive underground laboratory filled with futuristic technology.
+        Strange robots moved silently across the room while giant computer screens displayed maps of distant planets.
+        From that moment forward, Mason knew his ordinary life had changed forever.
+    </p>
+
+    <!-- WORD TABLE -->
+    <h2>Remove and Classify Twenty Words</h2>
+
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Type</th>
+        </tr>
+
+        <tr><td>quiet</td><td>Adjective</td></tr>
+        <tr><td>curious</td><td>Adjective</td></tr>
+        <tr><td>teenager</td><td>Noun</td></tr>
+        <tr><td>inventor</td><td>Noun</td></tr>
+        <tr><td>afternoon</td><td>Noun</td></tr>
+        <tr><td>small</td><td>Adjective</td></tr>
+        <tr><td>strange</td><td>Adjective</td></tr>
+        <tr><td>broken</td><td>Adjective</td></tr>
+        <tr><td>often</td><td>Adverb</td></tr>
+        <tr><td>unusual</td><td>Adjective</td></tr>
+        <tr><td>stormy</td><td>Adjective</td></tr>
+        <tr><td>glowing</td><td>Adjective</td></tr>
+        <tr><td>silver</td><td>Adjective</td></tr>
+        <tr><td>mysterious</td><td>Adjective</td></tr>
+        <tr><td>wildly</td><td>Adverb</td></tr>
+        <tr><td>massive</td><td>Adjective</td></tr>
+        <tr><td>futuristic</td><td>Adjective</td></tr>
+        <tr><td>silently</td><td>Adverb</td></tr>
+        <tr><td>giant</td><td>Adjective</td></tr>
+        <tr><td>planets</td><td>Noun</td></tr>
+    </table>
+
+    <!-- INPUT FORM -->
+    <h2>Mad Lib Input Form</h2>
+
+    <p>Noun:
+        <input type="text" id="noun1">
+    </p>
+
+    <p>Adjective:
+        <input type="text" id="adjective1">
+    </p>
+
+    <p>Adverb:
+        <input type="text" id="adverb1">
+    </p>
+
+    <p>Another Noun:
+        <input type="text" id="noun2">
+    </p>
+
+    <button onclick="makeMadLib()">Submit</button>
+
+    <!-- OUTPUT -->
+    <h2>Mad Lib Output</h2>
+
+    <p id="output" class="output"></p>
+
+    <!-- JAVASCRIPT -->
     <script>
-        // Addition Logic
-        function addNumbers() {
-            let num1 = Number(document.getElementById("add1").value);
-            let num2 = Number(document.getElementById("add2").value);
-            let answer = num1 + num2;
-            document.getElementById("addOutput").innerHTML = "Result: " + answer;
+
+        function makeMadLib() {
+
+            let noun1 = document.getElementById("noun1").value;
+            let adjective1 = document.getElementById("adjective1").value;
+            let adverb1 = document.getElementById("adverb1").value;
+            let noun2 = document.getElementById("noun2").value;
+
+            // FULL MAD LIB STORY (FIXED + MORE NATURAL)
+            let story =
+                "Inside a " + adjective1 + " world, a " + noun1 +
+                " moved " + adverb1 +
+                " through the village searching for a mysterious " + noun2 +
+                ". Everything around it felt strange and full of hidden energy.";
+
+            document.getElementById("output").innerHTML = story;
         }
 
-        // Multiplication Logic
-        function multiplyNumbers() {
-            let num1 = Number(document.getElementById("multiply1").value);
-            let num2 = Number(document.getElementById("multiply2").value);
-            let answer = num1 * num2;
-            document.getElementById("multiplyOutput").innerHTML = "Result: " + answer;
-        }
-
-        // Pythagorean Logic: c = √(a² + b²)
-        function findC() {
-            let a = Number(document.getElementById("aValue").value);
-            let b = Number(document.getElementById("bValue").value);
-            
-            if (a > 0 && b > 0) {
-                let c = Math.sqrt((a * a) + (b * b));
-                // toFixed(2) limits the result to 2 decimal places for neatness
-                document.getElementById("cOutput").innerHTML = "c = " + c.toFixed(2);
-            } else {
-                document.getElementById("cOutput").innerHTML = "Please enter values for a and b";
-            }
-        }
     </script>
 
 </body>
+
 </html>

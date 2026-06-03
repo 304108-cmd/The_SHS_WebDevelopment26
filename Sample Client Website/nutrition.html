@@ -1,92 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TITLE HERE</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeaksPrehab | Home</title>
+    <!-- Framework Stylesheets -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Core JavaScript -->
+    <script src="https://cloudflare.com"></script>
+    <script src="https://cloudflare.com"></script>
+</head>
+<body class="bg-light">
 
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-
-        <!-- CSS -->
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <!-- Animate -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-        <!-- Custom -->
-        <link rel="stylesheet" href="CSS/style.css">
-
-        <!-- JavaScript -->
-        <!-- These are needed to get the responsive menu to work -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <body>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a href="http://shakonet.isd720.com" class="navbar-brand">PeaksPrehab</a>
+    <!-- 1. CLEAN NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <!-- FIX 1: Changed external site to local splash page -->
+            <a href="1splash.html" class="navbar-brand fw-bold text-primary">PeaksPrehab</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav me-auto">
-                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                    <li class="nav-item">
-                        <a href="1splash.html" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="2resourcehub.html" class="nav-link">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="3coaching.html" class="nav-link">Coaching</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="blog.html" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="business.html" class="nav-link">Business</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="chatrooms.html" class="nav-link">Chatrooms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="csurvivorship.html" class="nav-link">Survivorship</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mentalhealth.html" class="nav-link">Mental Health</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="nutrition.html" class="nav-link">Nutrition</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="fitness.html" class="nav-link">Fitness</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="spirituality.html" class="nav-link">Spirituality</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="events.html" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mailto:smailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link active" tabindex="-1">Contact</a>
-                    </li>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                    <li class="nav-item"><a href="1splash.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="3coaching.html" class="nav-link">Coaching</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <!-- FIX 2: Fixed resource hub filename pointer -->
+                    <li class="nav-item"><a href="2resourcehub.html" class="nav-link text-info fw-bold">Resource Hub</a></li>
+                    <!-- FIX 3: Corrected malformed mailto link syntax -->
+                    <li class="nav-item"><a href="mailto:peaksprehab@gmail.com" class="nav-link">Contact</a></li>
                 </ul>
-                <form class="d-flex">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary" type="button">Subscribe</button>
                     <button class="btn btn-primary" type="button">Login</button>
-                </form>
+                </div>
             </div>
         </div>
     </nav>
-        <!-- Your content goes here --> 
-    </body>
-    <footer>
-        <p>&copy; 2026 Your Company Name. All rights reserved.</p>
-    </footer>    
+
+    <!-- 2. WELCOME BANNER (HERO) -->
+    <header class="bg-primary text-white text-center py-5 shadow-sm">
+        <div class="container">
+            <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Welcome to PeaksPrehab</h1>
+            <p class="lead">Your complete hub for health, wellness, and recovery training.</p>
+            <button class="btn btn-light btn-lg rounded-pill px-4 mt-2">Explore Premium Content</button>
+        </div>
+    </header>
+
+    <!-- 3. RESPONSIVE TILED RESOURCE PORTAL -->
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Core Wellness Pillars</h2>
+            <p class="text-muted">Explore our professional resources designed for your subscription goals.</p>
+        </div>
+
+        <!-- Bootstrap Responsive Layout Grid -->
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1: Mental Health -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm border-0 text-center p-3">
+                    <div class="card-body">
+                        <i class="fa-solid fa-brain text-primary display-5 mb-3"></i>
+                        <h4 class="card-title fw-bold">Mental Health</h4>
+                        <p class="card-text text-muted">Mindfulness exercises, cognitive toolkits, and stress management resources.</p>
+                        <a href="mentalhealth.html" class="btn btn-outline-primary btn-sm stretched-link">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Nutrition -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm border-0 text-center p-3">
+                    <div class="card-body">
+                        <i class="fa-solid fa-apple-whole text-success display-5 mb-3"></i>
+                        <h4 class="card-title fw-bold">Nutrition</h4>
+                        <p class="card-text text-muted">Meal prep strategies, dietary framework guides, and metabolic health plans.</p>
+                        <a href="nutrition.html" class="btn btn-outline-success btn-sm stretched-link">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Fitness -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm border-0 text-center p-3">
+                    <div class="card-body">
+                        <i class="fa-solid fa-dumbbell text-warning display-5 mb-3"></i>
+                        <h4 class="card-title fw-bold">Fitness</h4>
+                        <p class="card-text text-muted">Prehab routines, strength preservation workouts, and mobility challenges.</p>
+                        <a href="fitness.html" class="btn btn-outline-warning btn-sm stretched-link">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Survivorship -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm border-0 text-center p-3">
+                    <div class="card-body">
+                        <i class="fa-solid fa-heart text-danger display-5 mb-3"></i>
+                        <h4 class="card-title fw-bold">Survivorship</h4>
+                        <p class="card-text text-muted">Thriving post-treatment through personalized active lifestyle adjustments.</p>
+                        <a href="csurvivorship.html" class="btn btn-outline-danger btn-sm stretched-link">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Chatrooms -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm border-0 text-center p-3">
+                    <div class="card-body">
+                        <i class="fa-solid fa-comments text-info display-5 mb-3"></i>
+                        <h4 class="card-title fw-bold">Chatrooms</h4>
+                        <p class="card-text text-muted">Connect instantly with peers, health coaches, and community circles.</p>
+                        <a href="chatrooms.html" class="btn btn-outline-info btn-sm stretched-link">Join Discussion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. CLEAN FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 PeaksPrehab. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
